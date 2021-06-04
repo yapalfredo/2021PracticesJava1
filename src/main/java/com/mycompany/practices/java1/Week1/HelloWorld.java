@@ -4,16 +4,17 @@
  * and open the template in the editor.
  */
 package com.mycompany.practices.java1.Week1;
+
 import edu.duke.*;
-/**
- *
- * @author al
- */
+import java.nio.file.Paths;
+
 public class HelloWorld {
-    public void runHello(){
-        FileResource res = new FileResource("hello_unicode.txt");
-        for (String line : res.lines()){
-         System.out.println(line);
+
+    public static void main(String[] args) {
+        FileResource res = new FileResource(Paths.get("").toAbsolutePath().toString() + "\\src\\main\\java\\com\\mycompany\\practices\\java1\\Week1\\hello_unicode.txt");
+        for (String line : res.lines()) {
+            System.out.println(line);
         }
+        //System.out.println(Paths.get("").toAbsolutePath().toString());
     }
 }
